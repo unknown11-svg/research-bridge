@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-researchbridge-staging-93801-authRole",
+      "UnauthRoleArn": "arn:aws:iam::391883763934:role/amplify-researchbridge-staging-93801-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::391883763934:role/amplify-researchbridge-staging-93801-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-researchbridge-staging-93801-deployment",
+      "UnauthRoleName": "amplify-researchbridge-staging-93801-unauthRole",
+      "StackName": "amplify-researchbridge-staging-93801",
+      "StackId": "arn:aws:cloudformation:eu-north-1:391883763934:stack/amplify-researchbridge-staging-93801/83f81cf0-1b73-11f0-98f0-06b42b5fbefb",
+      "AmplifyAppId": "d3p7ac6k2g7yta"
+    },
+    "categories": {
+      "auth": {
+        "ResearchBridge": {}
+      }
+    }
+  }
+}

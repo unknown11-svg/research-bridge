@@ -5,6 +5,7 @@ import DashboardPage from './pages/DashboardPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import SignupPage from './pages/SignupPage';
 import Homepage from './pages/Homepage';
+import VerifyPage from './pages/VerifyPage';
 
 function App() {
   return (
@@ -14,12 +15,13 @@ function App() {
           <Route path="/" element={<Homepage />} /> 
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/verify" element={<VerifyPage />} />
           <Route
             path="/dashboard"
             element={
-              <ProtectedRoute>
+        
                 <DashboardPage />
-              </ProtectedRoute>
+        
             }
           />
           <Route path="*" element={<Homepage />} />

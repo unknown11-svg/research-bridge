@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    width: 100%;
+    z-index: 1115;   
+}
+
+nav img {
+    width: 180px;
+}
+nav ul {
+    flex: 1;
+    text-align: right;
+}
+ nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 2px 4px;
+    position: relative;
+ }
+ nav ul li a {
+    color: #000;
+    font-weight: bolder;
+
+    text-decoration: none;
+        font-size: 16px;
+        opacity: 0.9;
+        cursor: pointer;
+ }
+ nav ul li::after{
+    content: '';
+        width: 0%;
+        height: 2px;
+        display: block;
+        background: lightskyblue;
+        margin: auto;
+        transition: 0.5s;
+ }
+ nav ul li:hover::after {
+    width: 100%;
+}
+.active{
+   
+   color: #0077b6;
+  
+}
+
+  
+  /* Container */
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+ 
+  
+  .nav-buttons {
+    display: flex;
+    gap: 12px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    margin-top: 10%;
+ 
+ 
+  }
+  
+  .hero-title {
+    font-size: 42px;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 700;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+  }
+  
+  .hero-actions {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #0077b6;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #005f8d;
+  }
+  
+  .btn-outline {
+    background-color: white;
+    color: #0077b6;
+    border: 2px solid #0077b6;
+  }
+  
+  .btn-outline:hover {
+    background-color: #e1f5ff;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+  }

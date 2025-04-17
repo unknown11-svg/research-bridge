@@ -1,54 +1,41 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, Container, Typography, Box, Paper } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import img from '../images/researchbridgelogo.png'
+import "../styles/homepage.css"
 
-const StyledPaper = styled(Paper)(({ theme }) => ({
-  padding: theme.spacing(4),
-  maxWidth: 450,
-  margin: 'auto',
-  marginTop: theme.spacing(8),
-  textAlign: 'center',
-}));
 
 const Homepage = () => {
   const navigate = useNavigate();
 
   return (
-    <Container component="main" maxWidth="xs">
-      <StyledPaper elevation={3}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Research Bridge
-        </Typography>
-        
-        <Typography variant="body1" paragraph>
-          Welcome to the Research Bridge
-        </Typography>
+  <>
+  <head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+</head>
+    <nav>
+      <img src={img} className="logo"/>
+      <ul className="logo">
+      <li ><a className='active'>Home</a></li>
+        <li><a href='/signup'>Sign up</a></li>
+        <li><a href='/login'>Login</a></li>
+      </ul>
+    </nav>
+    
+    <section className="hero">
+        <h1 className="hero-title">
+          Connect with researchers and scientific knowledge
+        </h1>
+        <p className="hero-subtitle">
+          Discover publications, ask questions, and find collaborators.
+        </p>
+        <div className="hero-actions">
+          <button className="btn btn-primary" onClick={()=>navigate('/signup')}>Join Now</button>
+          <button className="btn btn-outline">Learn More</button>
+        </div>
+      </section>
 
-        <Box sx={{ mt: 3 }}>
-          <Button
-            fullWidth
-            variant="contained"
-            color="primary"
-            size="large"
-            onClick={() => navigate('/login')}
-            sx={{ mb: 2 }}
-          >
-            Login
-          </Button>
-          
-          <Button
-            fullWidth
-            variant="outlined"
-            color="secondary"
-            size="large"
-            onClick={() => navigate('/signup')}
-          >
-            Sign Up
-          </Button>
-        </Box>
-      </StyledPaper>
-    </Container>
+     
+  </>
   );
 };
 
