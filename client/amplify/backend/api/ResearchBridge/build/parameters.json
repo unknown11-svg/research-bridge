@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "ResearchBridge",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-researchbridge-staging-93801-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/836d0e40d3fdc0351692ecfc92293ed76d9b18ae"
+}

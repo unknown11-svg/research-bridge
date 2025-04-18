@@ -1,0 +1,98 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-researchbridge-staging-93801-authRole",
+      "UnauthRoleArn": "arn:aws:iam::391883763934:role/amplify-researchbridge-staging-93801-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::391883763934:role/amplify-researchbridge-staging-93801-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-researchbridge-staging-93801-deployment",
+      "UnauthRoleName": "amplify-researchbridge-staging-93801-unauthRole",
+      "StackName": "amplify-researchbridge-staging-93801",
+      "StackId": "arn:aws:cloudformation:eu-north-1:391883763934:stack/amplify-researchbridge-staging-93801/83f81cf0-1b73-11f0-98f0-06b42b5fbefb",
+      "AmplifyAppId": "d3p7ac6k2g7yta"
+    }
+  },
+  "auth": {
+    "ResearchBridge": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "eu-north-1_yFkHWZQak",
+        "AppClientIDWeb": "5fmqqnsmqp1a1m5jbflvcrljjo",
+        "AppClientID": "gff52d1lelhkjnq9hsj3iq1jm",
+        "HostedUIDomain": "2ldckl7m65tp-staging",
+        "IdentityPoolId": "eu-north-1:8f752562-8584-42d6-9ae7-fcd52494758a",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-north-1:391883763934:userpool/eu-north-1_yFkHWZQak",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://2ldckl7m65tp-staging.auth.eu-north-1.amazoncognito.com/oauth2/idpresponse\"],\"LogoutURLs\":[\"https://2ldckl7m65tp-staging.auth.eu-north-1.amazoncognito.com/oauth2/idpresponse\"]}",
+        "UserPoolName": "ResearchBridge"
+      },
+      "lastPushTimeStamp": "2025-04-17T19:39:50.527Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-researchbridge-staging-93801-deployment/amplify-cfn-templates/auth/ResearchBridge-cloudformation-template.json",
+        "logicalId": "authResearchBridge"
+      }
+    }
+  },
+  "api": {
+    "ResearchBridge": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "lojwdimqhvhrtilssvsqzai7cq",
+        "GraphQLAPIEndpointOutput": "https://562rtxv7ofchzib3tz3duj7nxq.appsync-api.eu-north-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-enxpgj6t65bpbnbu23jgeiulda"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-researchbridge-staging-93801-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiResearchBridge"
+      },
+      "lastPushTimeStamp": "2025-04-17T19:39:51.650Z",
+      "lastPushDirHash": "g+8JGbeoVxKAyqBQ+wRdYacwoD4="
+    }
+  }
+}
